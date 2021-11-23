@@ -1,0 +1,24 @@
+{
+  "name": "applewebsite",
+  "version": "1.0.0",
+  "description": "apple Web Site Scroll,effect animations clone Coding ",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm start",
+    "node-sass": "node-sass",
+    "sass": "node-sass -wr styles/main.scss style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/choiwk/AppleWebSite.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/choiwk/AppleWebSite/issues"
+  },
+  "homepage": "https://github.com/choiwk/AppleWebSite#readme",
+  "dependencies": {
+    "node-sass": "^6.0.1"
+  }
+}
