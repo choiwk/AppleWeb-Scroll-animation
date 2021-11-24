@@ -4,9 +4,9 @@ html {
 
 body {
   overflow-x: hidden;
-  color: #1d1d1f;
+  color: #fff;
   letter-spacing: -0.05;
-  background-color: #fff; }
+  background-color: #1d1d1f; }
 
 p {
   line-height: 1.6; }
@@ -154,6 +154,159 @@ button {
   background: transparent;
   cursor: pointer; }
 
+a {
+  color: #1d1d1f;
+  text-decoration: none; }
+
 .global-nav {
-  height: 144px;
-  background-color: red; }
+  height: 44px;
+  padding: 0 1rem; }
+
+.global-nav-links,
+.local-nav-links {
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+  max-width: 1000px;
+  height: 100%;
+  margin: 0 auto; }
+  .global-nav-links a,
+  .local-nav-links a {
+    color: #fff; }
+
+.global-nav-links {
+  justify-content: space-between; }
+
+.local-nav {
+  height: 52px;
+  border-bottom: 1px solid #ddd; }
+  .local-nav .local-nav-links a:not(.product-name) {
+    margin-left: 2em;
+    font-size: 0.8rem; }
+  .local-nav .local-nav-links .product-name {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-right: auto;
+    font-size: 1.4rem;
+    font-weight: bold; }
+
+.scroll-section {
+  padding-top: 50vh; }
+  .scroll-section .main-message {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5px;
+    height: 3em;
+    font-size: 2.5rem; }
+    .scroll-section .main-message p {
+      font-weight: bold;
+      text-align: center;
+      line-height: 1.2; }
+      .scroll-section .main-message p small {
+        display: block;
+        margin-bottom: 0.5em;
+        font-size: 1.2rem; }
+
+.sticky-elem {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%; }
+
+#scroll-section-0 h1 {
+  font-size: 4rem;
+  text-align: center; }
+
+#scroll-section-1 .description {
+  margin: 0 auto;
+  padding: 0 1rem;
+  max-width: 1000px;
+  font-size: 1.2rem; }
+  #scroll-section-1 .description strong {
+    float: left;
+    margin-right: 0.2em;
+    text-align: start;
+    font-size: 2.3rem;
+    color: #00b5e2; }
+
+#scroll-section-2 .main-message {
+  font-size: 3rem; }
+
+#scroll-section-2 .desc-message {
+  width: 50%;
+  font-weight: bold; }
+  #scroll-section-2 .desc-message p {
+    font-size: 0.8rem; }
+  #scroll-section-2 .desc-message .pin {
+    width: 1px;
+    height: 100px;
+    background-color: #fff; }
+
+#scroll-section-3 .mid-message {
+  margin: 0 auto;
+  padding: 0 1rem;
+  max-width: 1000px;
+  font-size: 1.9rem;
+  color: #888; }
+  #scroll-section-3 .mid-message strong {
+    color: #8f00ff; }
+
+#scroll-section-3 .canvas-caption {
+  margin: 0 auto;
+  padding: 0 1rem;
+  max-width: 1000px;
+  font-size: 1.2rem;
+  color: #888; }
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5rem;
+  width: 100%;
+  height: 5rem;
+  background-color: #15151f; }
+  .footer p {
+    color: #fff;
+    font-weight: bold; }
+
+@media (min-width: 1024px) {
+  .global-nav {
+    height: 80px; }
+  .global-nav-links a,
+  .local-nav-links a {
+    font-size: 1.5rem;
+    color: #fff; }
+  .local-nav {
+    height: 80px;
+    border-bottom: 1px solid #ddd; }
+    .local-nav .local-nav-links a:not(.product-name) {
+      margin-left: 5em;
+      font-size: 1rem;
+      font-weight: 700; }
+    .local-nav .local-nav-links .product-name {
+      font-size: 2rem; }
+  #scroll-section-0 h1 {
+    font-size: 9vw; }
+  #scroll-section-0 .main-message {
+    font-size: 4vw; }
+  #scroll-section-1 .description {
+    font-size: 2rem; }
+    #scroll-section-1 .description strong {
+      font-size: 5rem; }
+  #scroll-section-2 .main-message {
+    font-size: 6vw; }
+    #scroll-section-2 .main-message small {
+      font-size: 1.5vw; }
+  #scroll-section-2 .desc-message {
+    width: 10%;
+    font-weight: bold; }
+  #scroll-section-3 .mid-message {
+    font-size: 4vw; }
+  #scroll-section-3 .canvas-caption {
+    font-size: 2rem; }
+  .footer {
+    margin-top: 20rem;
+    height: 15rem; }
+    .footer p {
+      font-size: 1.5rem; } }
