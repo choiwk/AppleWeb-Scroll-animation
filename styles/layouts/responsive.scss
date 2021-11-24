@@ -1,0 +1,78 @@
+@media (min-width: 1024px) {
+  .global-nav {
+    height: 80px;
+  }
+  .global-nav-links,
+  .local-nav-links {
+    a {
+      font-size: 1.5rem;
+      color: #fff;
+    }
+  }
+
+  .local-nav {
+    height: 80px;
+    border-bottom: 1px solid #ddd;
+
+    .local-nav-links {
+      a:not(.product-name) {
+        margin-left: 5em;
+        font-size: 1rem;
+        font-weight: 700;
+      }
+      .product-name {
+        font-size: 2rem;
+      }
+    }
+  }
+
+  #scroll-section-0 {
+    h1 {
+      font-size: 9vw;
+    }
+    .main-message {
+      font-size: 4vw;
+    }
+  }
+
+  #scroll-section-1 {
+    .description {
+      font-size: 2rem;
+
+      strong {
+        font-size: 5rem;
+      }
+    }
+  }
+
+  #scroll-section-2 {
+    .main-message {
+      font-size: 6vw;
+
+      small {
+        font-size: 1.5vw;
+      }
+    }
+    .desc-message {
+      width: 10%;
+      font-weight: bold;
+    }
+  }
+
+  #scroll-section-3 {
+    .mid-message {
+      font-size: 4vw;
+    }
+    .canvas-caption {
+      font-size: 2rem;
+    }
+  }
+
+  .footer {
+    margin-top: 20rem;
+    height: 15rem;
+    p {
+      font-size: 1.5rem;
+    }
+  }
+}
