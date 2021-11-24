@@ -7,9 +7,9 @@ html {
 
 body {
   overflow-x: hidden;
-  color: rgb(29, 29, 31);
+  color: #fff;
   letter-spacing: -0.05;
-  background-color: #fff;
+  background-color: rgb(29, 29, 31);
 }
 
 p {
@@ -17,4 +17,7 @@ p {
 }
 
 @import './base/default.scss';
-@import './layout/nav.scss';
+@import './layouts/nav.scss';
+@import './layouts/scrolls.scss';
+@import './layouts/footer.scss';
+@import './layouts/responsive.scss';

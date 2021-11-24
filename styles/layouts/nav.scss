@@ -1,0 +1,38 @@
+.global-nav {
+  height: 44px;
+  padding: 0 1rem;
+}
+.global-nav-links,
+.local-nav-links {
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+  max-width: 1000px;
+  height: 100%;
+  margin: 0 auto;
+  a {
+    color: #fff;
+  }
+}
+
+.global-nav-links {
+  justify-content: space-between;
+}
+
+.local-nav {
+  height: 52px;
+  border-bottom: 1px solid #ddd;
+
+  .local-nav-links {
+    a:not(.product-name) {
+      margin-left: 2em;
+      font-size: 0.8rem;
+    }
+    .product-name {
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      margin-right: auto;
+      font-size: 1.4rem;
+      font-weight: bold;
+    }
+  }
+}
