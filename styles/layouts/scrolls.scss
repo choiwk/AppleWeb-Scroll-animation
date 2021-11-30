@@ -1,5 +1,6 @@
 .scroll-section {
   padding-top: 50vh;
+  border: 2px solid red;
 
   .main-message {
     display: flex;
@@ -8,6 +9,27 @@
     margin-top: 5px;
     height: 3em;
     font-size: 2.5rem;
+    p {
+      font-weight: bold;
+      text-align: center;
+      line-height: 1.2;
+
+      small {
+        display: block;
+        margin-bottom: 0.5em;
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
+
+.scroll-section {
+  .sticky-elem {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
 
     p {
       font-weight: bold;
@@ -22,11 +44,12 @@
     }
   }
 }
-.sticky-elem {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
+
+#show-scene-0 #scroll-section-0 .sticky-elem,
+#show-scene-1 #scroll-section-1 .sticky-elem,
+#show-scene-2 #scroll-section-2 .sticky-elem,
+#show-scene-3 #scroll-section-3 .sticky-elem {
+  display: block;
 }
 
 #scroll-section-0 {

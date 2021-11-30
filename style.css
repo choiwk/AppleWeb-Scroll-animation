@@ -159,6 +159,10 @@ a {
   text-decoration: none; }
 
 .global-nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
   height: 44px;
   padding: 0 1rem; }
 
@@ -178,6 +182,10 @@ a {
   justify-content: space-between; }
 
 .local-nav {
+  position: absolute;
+  top: 45px;
+  left: 0;
+  width: 100%;
   height: 52px;
   border-bottom: 1px solid #ddd; }
   .local-nav .local-nav-links a:not(.product-name) {
@@ -190,7 +198,8 @@ a {
     font-weight: bold; }
 
 .scroll-section {
-  padding-top: 50vh; }
+  padding-top: 50vh;
+  border: 2px solid red; }
   .scroll-section .main-message {
     display: flex;
     align-items: center;
@@ -207,11 +216,26 @@ a {
         margin-bottom: 0.5em;
         font-size: 1.2rem; }
 
-.sticky-elem {
+.scroll-section .sticky-elem {
+  display: none;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%; }
+  .scroll-section .sticky-elem p {
+    font-weight: bold;
+    text-align: center;
+    line-height: 1.2; }
+    .scroll-section .sticky-elem p small {
+      display: block;
+      margin-bottom: 0.5em;
+      font-size: 1.2rem; }
+
+#show-scene-0 #scroll-section-0 .sticky-elem,
+#show-scene-1 #scroll-section-1 .sticky-elem,
+#show-scene-2 #scroll-section-2 .sticky-elem,
+#show-scene-3 #scroll-section-3 .sticky-elem {
+  display: block; }
 
 #scroll-section-0 h1 {
   font-size: 4rem;
