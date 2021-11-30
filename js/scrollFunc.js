@@ -13,6 +13,13 @@
       objs: {
         //?: HTML 객체들을 모아두는 곳.
         container: document.querySelector('#scroll-section-0'),
+        messageA: document.querySelector('#scroll-section-0 .main-message.a'),
+        messageB: document.querySelector('#scroll-section-0 .main-message.b'),
+        messageC: document.querySelector('#scroll-section-0 .main-message.c'),
+        messageD: document.querySelector('#scroll-section-0 .main-message.d'),
+      },
+      values: {
+        messageA_opacity: [0, 1],
       },
     },
     {
@@ -71,6 +78,38 @@
     document.body.setAttribute('id', `show-scene-${currentScene}`);
   };
 
+  function calcValues(values, currentYScrollSet) {
+    //? currentYScrollSet: 현재 Scene에서 얼마나 스크롤 됬는지.
+  }
+
+  function playAnimation() {
+    const objs = sceneInfo[currentScene].objs; //TODO: DOM 객체 요소들
+    const values = sceneInfo[currentScene].values;
+    const currentYScrollSet = scrollY - prevScrollHeight; //TODO: Scene이 바뀌면 scrollY 값이 다시 0에서 시작
+    console.log(
+      '현재 Scene ' +
+        currentScene +
+        ' 에서 ' +
+        currentYScrollSet +
+        ' 번째 스크롤'
+    );
+    switch (currentScene) {
+      case 0:
+        let messageA_opacity_0 = values.messageA_opacity[0];
+        let messageA_opacity_1 = values.messageA_opacity[1];
+
+        // console.log(calcValues(values.messageA_opacity, currentYScrollSet));
+
+        break;
+      case 1:
+        break;
+      case 2:
+        break;
+      case 3:
+        break;
+    }
+  }
+
   function scrollLoop() {
     prevScrollHeight = 0;
 
@@ -79,20 +118,20 @@
     }
     if (scrollY > prevScrollHeight + sceneInfo[currentScene].scrollHeight) {
       currentScene++; //! 현재 몇번째 Scene에 있는지.
+      document.body.setAttribute('id', `show-scene-${currentScene}`);
     }
     if (scrollY < prevScrollHeight) {
       if (currentScene === 0) return; //? 브라우저 바운스 효과로 인해 마이너스 되는 것을 방지 (모바일).
       currentScene--;
+      document.body.setAttribute('id', `show-scene-${currentScene}`);
     }
 
-    console.log(
-      '현재 씬 :' + currentScene + ' ' + '시작영역 = ' + prevScrollHeight
-    );
+    console.log('총 scroll : ' + scrollY);
+    console.log('시작영역 = ' + prevScrollHeight);
     console.log('다음 Scene : ' + `${prevScrollHeight + 5205}`);
-    console.log('scrollY : ' + scrollY);
     console.log('--------------------------');
 
-    document.body.setAttribute('id', `show-scene-${currentScene}`);
+    playAnimation();
   }
 
   window.addEventListener('scroll', () => {
