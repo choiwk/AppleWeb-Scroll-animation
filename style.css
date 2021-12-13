@@ -206,7 +206,8 @@ a {
     justify-content: center;
     margin-top: 5px;
     height: 3em;
-    font-size: 2.5rem; }
+    font-size: 2.5rem;
+    opacity: 0; }
     .scroll-section .main-message p {
       font-weight: bold;
       text-align: center;
@@ -222,14 +223,15 @@ a {
   top: 0;
   left: 0;
   width: 100%; }
-  .scroll-section .sticky-elem p {
-    font-weight: bold;
-    text-align: center;
-    line-height: 1.2; }
-    .scroll-section .sticky-elem p small {
-      display: block;
-      margin-bottom: 0.5em;
-      font-size: 1.2rem; }
+
+.scroll-section .sticky-elem p {
+  font-weight: bold;
+  text-align: center;
+  line-height: 1.2; }
+  .scroll-section .sticky-elem p small {
+    display: block;
+    margin-bottom: 0.5em;
+    font-size: 1.2rem; }
 
 #show-scene-0 #scroll-section-0 .sticky-elem,
 #show-scene-1 #scroll-section-1 .sticky-elem,

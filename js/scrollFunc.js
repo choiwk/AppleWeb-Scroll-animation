@@ -80,12 +80,23 @@
 
   function calcValues(values, currentYScrollSet) {
     //? currentYScrollSet: 현재 Scene에서 얼마나 스크롤 됬는지.
+
+    let rv;
+    //? 현재 (Scene)에서 스크롤된 범위를 비율로 구하기
+    let scrollRatio = currentYScrollSet / sceneInfo[currentScene].scrollHeight;
+    rv = scrollRatio * (values[1] - values[0]) + values[0];
+    return rv;
   }
 
   function playAnimation() {
     const objs = sceneInfo[currentScene].objs; //TODO: DOM 객체 요소들
     const values = sceneInfo[currentScene].values;
     const currentYScrollSet = scrollY - prevScrollHeight; //TODO: Scene이 바뀌면 scrollY 값이 다시 0에서 시작
+    console.log(
+      `scrollY : ${scrollY} - prevScrollHeight :${prevScrollHeight} = ${
+        scrollY - prevScrollHeight
+      }`
+    );
     console.log(
       '현재 Scene ' +
         currentScene +
@@ -95,10 +106,12 @@
     );
     switch (currentScene) {
       case 0:
-        let messageA_opacity_0 = values.messageA_opacity[0];
-        let messageA_opacity_1 = values.messageA_opacity[1];
+        let messageA_opacity_in = calcValues(
+          values.messageA_opacity,
+          currentYScrollSet
+        );
 
-        // console.log(calcValues(values.messageA_opacity, currentYScrollSet));
+        console.log(messageA_opacity_in);
 
         break;
       case 1:
@@ -135,7 +148,7 @@
   }
 
   window.addEventListener('scroll', () => {
-    scrollY = window.scrollY;
+    scrollY = window.pageYOffset || document.documentElement.scrollTop;
     scrollLoop();
   });
   window.addEventListener('load', setLayout);
